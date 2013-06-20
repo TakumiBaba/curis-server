@@ -1,0 +1,20 @@
+!!! 5
+html
+  head
+    title TakumiBaba.com
+    script(type="text/javascript", src="/libs/jquery.min.js")
+    script(type="text/javascript", src="/libs/underscore.min.js")
+  body
+    #header
+    #content
+      ul
+        - _.each(tuples, function(tuple){
+            li: a(href="/views/#{tuple.name}/#{tuple.value}")= ""+tuple.name+":"+tuple.value
+        - })
+      input.name
+      | tuplename
+      input.tuple
+      | tuple
+      button.add タプルに追加！
+    #footer
+    != js("index")

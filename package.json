@@ -1,0 +1,21 @@
+{
+  "name": "curis-intent-server",
+  "version": "0.0.1",
+  "port": 1217,
+  "dependencies": {
+    "express": "3.2.6",
+    "async": "*",
+    "moment": "*",
+    "underscore": "*",
+    "mongoose": "*",
+    "coffee-script": "*",
+    "jade": "*",
+    "stylus": "*",
+    "direquire": "*",
+    "connect-mongo": "*",
+    "connect-asset": "*",
+    "connect-assets": "*",
+    "st": "*",
+    "mocha": "*"
+  }
+}
