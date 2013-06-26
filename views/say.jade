@@ -1,0 +1,13 @@
+!!! 5
+html
+  head
+    title TakumiBaba.com
+    script(type="text/javascript", src="/libs/jquery.min.js")
+    script(type="text/javascript", src="/libs/underscore.min.js")
+  body
+    #header
+    #content
+      input(type='text', x-webkit-speech='x-webkit-speech', lang='ja')
+      button.say Say!
+    #footer
+    != js("say")
