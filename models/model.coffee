@@ -23,6 +23,13 @@ TupleSchema = new Schema
   tuples: type: String
   value: type: String, default: ""
 
+GeofenceSchema = new Schema
+  tuplespace: type: String
+  latitude: type: Number
+  longitude: type: Number
+  radius: type: Number
+
+
 module.exports =
   TupleSpace: mongoose.model 'tuplespaces', TupleSpaceSchema
   TupleSpaceSchema: TupleSpaceSchema
@@ -30,3 +37,5 @@ module.exports =
   UserSchema: UserSchema
   Tuple: mongoose.model 'tuples', TupleSchema
   TupleSchema: TupleSchema
+  Geofence: mongoose.model 'geofences', GeofenceSchema
+  GeofenceSchema: GeofenceSchema

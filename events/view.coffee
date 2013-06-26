@@ -46,3 +46,9 @@ exports.View = (app)->
 
   door: (req, res)->
     return res.render "door"
+  say: (req, res)->
+    return res.render 'say'
+  baba: (req, res)->
+    return res.render "babascript"
+  geo: (req, res)->
+    return res.render "geofence"

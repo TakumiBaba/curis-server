@@ -42,6 +42,11 @@ app.use connect.static
 # Routes
 Tuple = app.get("events").Tuple app
 View = app.get("events").View app
+Geo = app.get("events").Geo app
+
+app.get "/geofence/", Geo.fetch
+app.get "/geofence/:tuplespace", Geo.fetch
+app.get "/geofence/:tuplespace/:latitude/:longitude/:radius", Geo.create
 
 app.get "/", Tuple.fetch
 app.get "/:name", Tuple.fetch
@@ -50,10 +55,17 @@ app.put "/:id", Tuple.modify
 app.delete "/:id", Tuple.delete
 
 app.get "/views/door", View.door
+app.get "/views/say", View.say
+app.get "/views/babascript", View.baba
+app.get "/views/geofence", View.geo
 app.get "/views/:space/door", View.door
+app.get "/views/:space/say", View.say
+app.get "/views/:space/babascript", View.baba
 app.get "/views/list/:name", View.List.index
 app.get "/views/list/:name/:tuple", View.List.add
 app.post "/views/list/:name/:tuple", View.List.add
+
+
 
 server = require("http").createServer app
 server.listen app.get 'port'
